@@ -13,5 +13,8 @@
         <label for="text">Testo:</label>
         <input name="text" #newtext class="form-control">
       </div>
+      <button (click)="addEmail(newrecipient, newobject, newtext)" class="btn btn-primary">
+      Send email
+      </button>
   </form>
 </div>
