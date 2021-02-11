@@ -9,9 +9,13 @@ import { Email } from '../email.model';
 export class SentMailComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'card mt-4';
   @Input() email: Email
+  expanded: boolean = false
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  espandi() {
+    this.expanded = !this.expanded;
+  }
 }

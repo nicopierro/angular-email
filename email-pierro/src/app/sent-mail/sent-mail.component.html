@@ -1,7 +1,9 @@
 <div class="card-body">
   <div>
-    <p>{{email.recipient}}</p>
-    <p>{{email.object}}</p>
-    <p>{{email.text}}</p>
+    <p>{{email.object}} - {{email.recipient}}</p>
+    <div>
+      <p *ngIf="expanded">{{email.text}}</p>
+      <button (click)="espandi()">espandi/chiudi</button>
+    </div>
   </div>
 </div>
