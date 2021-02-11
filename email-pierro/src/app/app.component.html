@@ -1,20 +1,26 @@
 <div class="container">
   <form class="jumbotron">
-      <h3 class="display-4">Send an email</h3>
-      <div class="form-group">
-        <label for="recipient">Destinatario:</label>
-        <input name="recipient" #newrecipient class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="object">Oggetto:</label>
-        <input name="object" #newobject class="form-control">
-      </div>
-      <div class="form-group">
-        <label for="text">Testo:</label>
-        <input name="text" #newtext class="form-control">
-      </div>
-      <button (click)="addEmail(newrecipient, newobject, newtext)" class="btn btn-primary">
+    <h3 class="display-4">Send an email</h3>
+    <div class="form-group">
+      <label for="recipient">Destinatario:</label>
+      <input name="recipient" #newrecipient class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="object">Oggetto:</label>
+      <input name="object" #newobject class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="text">Testo:</label>
+      <input name="text" #newtext class="form-control">
+    </div>
+    <button (click)="addEmail(newrecipient, newobject, newtext)" class="btn btn-primary">
       Send email
-      </button>
+    </button>
   </form>
+
+  <div class="container">
+    <app-sent-mail *ngFor="let email of emails" [email]="email"></app-sent-mail>
+
+
+  </div>
 </div>

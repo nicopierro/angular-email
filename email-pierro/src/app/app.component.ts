@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'email-pierro';
   emails:Email[];   // <-- component property
   constructor(){
-    this.emails = this.emails;
+    this.emails = [];
   }
 
   addEmail(recipient: HTMLInputElement, object: HTMLInputElement, text: HTMLInputElement): boolean {
