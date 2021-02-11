@@ -1,9 +1,13 @@
+<div class="card-header">
+  <h3>Email</h3>
+</div>
 <div class="card-body">
   <div>
     <p>{{email.object}} - {{email.recipient}}</p>
     <div>
       <p *ngIf="expanded">{{email.text}}</p>
-      <button (click)="espandi()">espandi/chiudi</button>
+      <button class="btn btn-secondary" (click)="espandi()" style="margin-bottom: 10px;">espandi/chiudi</button>
     </div>
+    <button class="btn btn-secondary" (click)="speciale()">speciale</button>
   </div>
 </div>

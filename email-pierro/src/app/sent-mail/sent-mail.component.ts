@@ -8,6 +8,7 @@ import { Email } from '../email.model';
 })
 export class SentMailComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'card mt-4';
+  @HostBinding('style.background') private background;
   @Input() email: Email
   expanded: boolean = false
   constructor() { }
@@ -17,5 +18,9 @@ export class SentMailComponent implements OnInit {
 
   espandi() {
     this.expanded = !this.expanded;
+  }
+
+  speciale() {
+    this.background = 'yellow';
   }
 }
